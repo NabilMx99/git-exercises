@@ -29,7 +29,7 @@ RUN a2enmod rewrite expires deflate ssl cgi alias env headers
 
 RUN curl --silent --show-error https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --1 --filename=composer
 
-ENV NODE_VERSION=16.20.0
+ENV NODE_VERSION=22.14.0
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ENV NVM_DIR=/root/.nvm
 RUN . "$NVM_DIR/nvm.sh" && nvm install ${NODE_VERSION}
